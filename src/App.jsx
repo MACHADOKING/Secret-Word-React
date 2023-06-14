@@ -112,6 +112,7 @@ function App() {
       // add score
       setScore((actualScore) => (actualScore += 100));
 
+      setGuesses(guessesQty);
       // restart game with new word
       startGame();
     }
