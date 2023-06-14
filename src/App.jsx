@@ -40,7 +40,7 @@ function App() {
     const word =
       words[category][Math.floor(Math.random() * words[category].length)];
 
-    return { word, category };
+    return { category, word };
   }, [words]);
 
   // starts the secret word game
@@ -48,7 +48,7 @@ function App() {
     // clear all letters
     clearLetterStates();
     // pick word and pick category
-    const { word, category } = pickWordAndCategory();
+    const { category, word } = pickWordAndCategory();
 
     // create an array of letters
     let wordLetters = word.split("");
@@ -56,8 +56,8 @@ function App() {
     wordLetters = wordLetters.map((l) => l.toLowerCase());
 
     // fill states
-    setPickedWord(word);
     setPickedCategory(category);
+    setPickedWord(word);
     setLetters(wordLetters);
 
     setGameStage(stages[1].name);

@@ -4,7 +4,7 @@ import "./Game.css";
 const Game = ({
   verifyLetter,
   pickedWord,
-  PickedCategory,
+  pickedCategory,
   letters,
   guessedLetters,
   wrongLetters,
@@ -30,7 +30,7 @@ const Game = ({
       </p>
       <h1>Adivinhe a palavra:</h1>
       <h3 className="tip">
-        Dica sobre a palavra: <span>{PickedCategory}</span>
+        Dica sobre a palavra: <span>{pickedCategory}</span>
       </h3>
       <p>Você ainda tem {guesses} tentativas</p>
       <div className="wordContainer">
